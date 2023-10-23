@@ -1,0 +1,164 @@
+/* * {
+  border: 1px solid black;
+} */
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #aaa;
+}
+
+.main {
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+h1,
+h3 {
+  color: white;
+}
+
+/* header */
+header {
+  padding: 5px 10px;
+  height: 11vh;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+}
+
+header img {
+  width: 50px;
+  margin-left: 15px;
+  transition: 0.5s;
+}
+header img:hover {
+  transform: scale(1.1);
+}
+
+header h1 {
+  text-shadow: 0 0 3px black;
+}
+
+nav {
+  margin-right: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  margin-left: 15px;
+  padding: 10px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: lightgreen;
+  background-color: white;
+}
+
+/* content */
+.content {
+  height: 79vh;
+  display: flex;
+}
+
+section {
+  width: 70%;
+  padding: 15px;
+  overflow-x: scroll;
+}
+
+section h3 {
+  color: black;
+  text-align: center;
+  position: fixed;
+  top: 13vh;
+  right: 55vw;
+}
+
+section table {
+  margin-top: 10vh;
+  width: 1000px;
+  border: 1px solid black;
+}
+
+section table thead {
+  background-color: lightcoral;
+}
+
+section table th,
+section table td {
+  border: 1px solid black;
+}
+
+/* Memberikan warna latar belakang pada baris ganjil */
+tr:nth-child(odd):not(thead tr) {
+  background-color: #ddd;
+}
+
+/* Memberikan warna latar belakang pada baris genap */
+tr:nth-child(even):not(thead tr) {
+  background-color: #bbb;
+}
+
+section table tfoot {
+  background-color: #aaa;
+  color: lightcoral;
+  text-align: center;
+}
+
+aside {
+  width: 30%;
+  background-color: lightblue;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.link1 a,
+.link2 a {
+  width: 60%;
+  margin: 5px auto;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link1 a img,
+.link2 a img {
+  height: 15px;
+  /* margin-left: 3px; */
+}
+
+/* footer */
+footer {
+  height: 10vh;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
