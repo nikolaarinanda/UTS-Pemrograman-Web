@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- judul halaman -->
+    <title>Form Page</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="main">
+        <header>
+            <img src="img/logo-itera.png" alt="logo">
+            <!-- judul halaman -->
+            <h1>FORM</h1>
+            <!-- menu navigasi -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Form</a></li>
+                    <li><a href="table.html">Table</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <section>
+                <h3>Form Pendataan Film</h3>
+                <!-- form film (bonus point kedua) -->
+                    <!-- penggunanaan method get dan mendesign query string -->
+                    <form action="table.html" method="get">
+                        <!-- salah satu label -->
+                        <label for="judul-film">Judul Film: </label>
+                        <!-- penggunaan required -->
+                        <input type="text" name="judul-film" id="judul-film" required>
+                        <br>
+    
+                        <label for="tahun-rilis">Tahun Rilis: </label>
+                        <input type="number" name="tahun-rilis" id="tahun-rilis" min="1900" max="2023" step="1" required>
+                        <br>
+    
+                        <label for="rating">Rating: </label>
+                        <input type="number" name="rating" id="rating" min="1" max="10" step="0.1" required>
+                        <br>
+    
+                        <div class="genre">
+                            <p class="label-genre">Genre: </p>
+                            <input type="checkbox" id="genre1" name="genre" value="Horror">
+                            <label for="genre1">Horror</label>
+                            <input type="checkbox" id="genre2" name="genre" value="Adventure">
+                            <label for="genre2">Drama</label>
+                            <input type="checkbox" id="genre3" name="genre" value="Horror">
+                            <label for="genre3">Fiksi Ilmiah</label>
+                            <input type="checkbox" id="genre4" name="genre" value="Horror">
+                            <label for="genre4">Fiksi</label>
+                        </div>
+    
+                        <div class="bahasa">
+                            <p class="label-bahasa">Bahasa: </p>
+                                <input type="radio" id="bahasa1" name="bahasa" value="Indonesia">
+                                <label for="bahasa1">Indonesia</label>
+                                <input type="radio" id="bahasa2" name="bahasa" value="Inggris">
+                                <label for="bahasa2">Inggris</label>
+                        </div>
+    
+                        <label for="negara">Negara Asal: </label>
+                        <input type="text" name="negara" id="negara">
+                        <br>
+
+                        <label for="durasi">Durasi (menit): </label>
+                        <input type="text" name="durasi" id="durasi">
+                        <br>
+    
+                        <label for="rumah-produksi">Rumah Produksi: </label>
+                        <input type="text" name="rumah-produksi" id="rumah-produksi">
+                        <br>
+    
+                        <label for="sutradara">Sutradara: </label>
+                        <input type="text" name="sutradara" id="sutradara">
+                        <br>
+                        
+                        <label for="produser">Produser: </label>
+                        <input type="text" name="produser" id="produser">
+                        <br>
+    
+                        <label for="pemeran">Pemeran: </label>
+                        <input type="text" name="pemeran" id="pemeran">
+                        <br>
+    
+                        <!-- tombol submit -->
+                        <input type="submit" value="submit">
+                    </form>
+            </section>
+            <aside>
+                <h3>Other Pages</h3>
+                <div class="aside-link">
+                    <div class="link1">
+                        <a href="home.html">Home Link<img src="img/arrow.png" alt=""></a>
+                    </div>
+                    <div class="link2">
+                        <a href="table.html">Table Link<img src="img/arrow.png" alt=""></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <p>© 2023 Nikola Arinanda. Hak Cipta Dilindungi Undang-Undang.</p></footer>
+        </footer>
+    </div>
+  </body>
+</html>

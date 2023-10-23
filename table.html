@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <!-- judul halaman -->
+    <title>Table Page</title>
+    <link rel="stylesheet" href="table.css" />
+  </head>
+  <body>
+    <div class="main">
+        <header>
+            <img src="img/logo-itera.png" alt="logo">
+            <!-- judul halaman -->
+            <h1>TABLE</h1>
+            <!-- menu navigasi -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="#">Table</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <section>
+                <h3>List Film</h3>
+                <table>
+                    <!-- judul film, tahun rilis, rating, genre, bahasa, durasi, sutradara, pemeran utama,produser, rumah produksi, negara asal -->
+                    <thead>
+                        <tr>
+                            <th>Judul Film</th>
+                            <th>Tahun Rilis</th>
+                            <th>Rating</th>
+                            <th>Genre</th>
+                            <th>Bahasa</th>
+                            <th>Negara Asal</th>
+                            <th>Durasi</th>
+                            <th>Sutradara</th>
+                            <th>Produser</th>
+                            <th>Pemeran Utama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data dummy -->
+                        <tr>
+                            <td>Avatar</td>
+                            <td>2009</td>
+                            <td>8.1</td>
+                            <td>Fiksi Ilmiah</td>
+                            <td>Inggris</td>
+                            <td>Amerika Serikat</td>
+                            <td>162 menit</td>
+                            <td>James Cameron</td>
+                            <td>James Cameron, Jon Landau</td>
+                            <td>Sam Worthington, Zoe Saldana</td>
+                        </tr>
+                        <tr>
+                            <td>Inception</td>
+                            <td>2010</td>
+                            <td>8.8</td>
+                            <td>Fiksi Ilmiah</td>
+                            <td>Inggris</td>
+                            <td>Amerika Serikat</td>
+                            <td>148 menit</td>
+                            <td>Christopher Nolan</td>
+                            <td>Christopher Nolan, Emma Thomas</td>
+                            <td>Leonardo DiCaprio, Joseph Gordon-Levitt</td>
+                        </tr>
+                        <tr>
+                            <td>The Shawshank Redemption</td>
+                            <td>1994</td>
+                            <td>9.3</td>
+                            <td>Drama</td>
+                            <td>Inggris</td>
+                            <td>Amerika Serikat</td>
+                            <td>142 menit</td>
+                            <td>Frank Darabont</td>
+                            <td>Niki Marvin</td>
+                            <td>Tim Robbins, Morgan Freeman</td>
+                        </tr>
+                        <tr>
+                            <td>Interstellar</td>
+                            <td>2014</td>
+                            <td>8.6</td>
+                            <td>Fiksi Ilmiah</td>
+                            <td>Inggris</td>
+                            <td>Amerika Serikat</td>
+                            <td>169 menit</td>
+                            <td>Christopher Nolan</td>
+                            <td>Christopher Nolan, Emma Thomas</td>
+                            <td>Matthew McConaughey, Anne Hathaway</td>
+                        </tr>
+                        <tr>
+                            <td>Forrest Gump</td>
+                            <td>1994</td>
+                            <td>8.8</td>
+                            <td>Drama</td>
+                            <td>Inggris</td>
+                            <td>Amerika Serikat</td>
+                            <td>142 menit</td>
+                            <td>Robert Zemeckis</td>
+                            <td>Wendy Finerman, Steve Tisch</td>
+                            <td>Tom Hanks, Robin Wright</td>
+                        </tr>
+                        <tr>
+                            <td id="judulFilm"></td>
+                            <td id="tahunRilis"></td>
+                            <td id="rating"></td>
+                            <td id="genre"></td>
+                            <td id="bahasa"></td>
+                            <td id="negaraAsal"></td>
+                            <td id="durasi"></td>
+                            <td id="sutradara"></td>
+                            <td id="produser"></td>
+                            <td id="pemeranUtama"></td>
+                        </tr>
+                    </tbody>
+                    <!--  -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="10">Penggunaan form dan tabel film untuk memenuhi kriteria bonus ke-2 didalam soal UTS</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <aside>
+                <h3>Other Pages</h3>
+                <div class="aside-link">
+                    <div class="link1">
+                        <a href="home.html">Home Link<img src="img/arrow.png" alt=""></a>
+                    </div>
+                    <div class="link2">
+                        <a href="form.html">Form Link<img src="img/arrow.png" alt=""></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <p>© 2023 Nikola Arinanda. Hak Cipta Dilindungi Undang-Undang.</p></footer>
+        </footer>
+    </div>
+
+    <script>
+        // Ambil query string dari URL
+        const queryString = window.location.search;
+    
+        // Hapus karakter '?' dari awal query string
+        const queryParams = new URLSearchParams(queryString);
+    
+        // Ambil nilai dari query string berdasarkan nama parameter
+        const judulFilm = queryParams.get("judul-film");
+        const tahunRilis = queryParams.get("tahun-rilis");
+        const rating = queryParams.get("rating");
+        const genre = queryParams.getAll("genre").join(", ");
+        const bahasa = queryParams.get("bahasa");
+        const negaraAsal = queryParams.get("negara");
+        const durasi = queryParams.get("durasi");
+        const sutradara = queryParams.get("sutradara");
+        const produser = queryParams.get("produser");
+        const pemeranUtama = queryParams.get("pemeran");
+    
+        // Tampilkan nilai-nilai tersebut dalam tabel
+        document.getElementById("judulFilm").textContent = judulFilm;
+        document.getElementById("tahunRilis").textContent = tahunRilis;
+        document.getElementById("rating").textContent = rating;
+        document.getElementById("genre").textContent = genre;
+        document.getElementById("bahasa").textContent = bahasa;
+        document.getElementById("negaraAsal").textContent = negaraAsal;
+        document.getElementById("durasi").textContent = durasi;
+        document.getElementById("sutradara").textContent = sutradara;
+        document.getElementById("produser").textContent = produser;
+        document.getElementById("pemeranUtama").textContent = pemeranUtama;
+      </script>
+  </body>
+</html>
